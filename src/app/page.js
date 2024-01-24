@@ -1,113 +1,249 @@
-import Image from "next/image";
+"use client";
+import React from 'react';
+import { useEffect } from 'react';
 
 export default function Home() {
+
+  useEffect(() => {
+    const menuBtn = document.querySelector('.menu-btn');
+    const mainMenu = document.querySelector('.main-menu');
+
+    const toggleMenu = () => {
+      mainMenu.classList.toggle('show');
+    };
+
+    menuBtn.addEventListener('click', toggleMenu);
+
+    return () => {
+      menuBtn.removeEventListener('click', toggleMenu);
+    };
+  }, []);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
+    <div className='mainclass'>
+      <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+      </div>
+
+      <div class="container">
+        <nav class="main-nav">
+          <img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo" />
+
+          <ul class="main-menu">
+            <li><a href="#">Office</a></li>
+            <li><a href="#">Windows</a></li>
+            <li><a href="#">Surface</a></li>
+            <li><a href="#">Xbox</a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+
+          <ul class="right-menu">
+            <li>
+              <div className="search-bar">
+                <input type="text" className="search-input" placeholder="Search..." />
+                <i className="fas fa-search search-icon"></i>
+              </div>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+
+
+        <header class="showcase">
+          <h2>Surface Deals</h2>
+          <p>
+            Select Surfaces are on sale now - save while supplies last
+          </p>
+          <a href="#" class="btn">
+            Shop Now <i class="fas fa-chevron-right"></i>
           </a>
+        </header>
+
+        <section class="home-cards">
+          <div>
+            <img src="https://i.ibb.co/LZPVKq9/card1.png" alt="" />
+            <h3>New Surface Pro 7</h3>
+            <p>
+              See how Katie Sowers, Asst. Coach for the 49ers, uses Surface Pro 7
+              to put her plans into play.
+            </p>
+            <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <div>
+            <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" />
+            <h3>New Surface Laptop 3</h3>
+            <p>
+              Express yourself powerfully with a thin, light, and elegant design,
+              faster performance, and up to 11.5 hours battery life.
+            </p>
+            <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <div>
+            <img src="https://i.ibb.co/2cnshH6/card3.png" alt="" />
+            <h3>Save $150 + free controller</h3>
+            <p>
+              Buy an Xbox One X console and double your fun with a free select
+              extra controller. Starting at $349.
+            </p>
+            <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <div>
+            <img src="https://i.ibb.co/G57P0Pb/card4.png" alt="" />
+            <h3>The new Microsoft Edge</h3>
+            <p>
+              Expect more. World class performance, with more privacy, more
+              productivity, and more value.
+            </p>
+            <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </section>
+
+        <section class="xbox">
+          <div class="content">
+            <h2>Xbox Game Pass Ultimate</h2>
+            <p>Xbox Game Pass Ultimate Xbox Live Gold and over 100 high-quality
+              console and PC games. Play together with friends and discover your
+              next favorite game.</p>
+            <a href="#" class="btn">
+              Join Now <i class="fas fa-chevron-right"></i>
+            </a>
+          </div>
+        </section>
+
+        <section class="home-cards">
+          <div>
+            <img src="https://i.ibb.co/zVqhWn2/card5.png" alt="" />
+            <h3>Microsoft Teams</h3>
+            <p>
+              Unleash the power of your team.
+            </p>
+            <a href="#">Shop Now <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <div>
+            <img src="https://i.ibb.co/mGZcxcn/card6.jpg" alt="" />
+            <h3>Unlock the power of learning</h3>
+            <p>
+              Get students future-ready with Windows 10 devices. Starting at $219.
+            </p>
+            <a href="#">Shop Now <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <div>
+            <img src="https://i.ibb.co/NpPvVHj/card7.png" alt="" />
+            <h3>Windows 10 Enterprise</h3>
+            <p>
+              Download the free 90-day evaluation for IT professionals.
+            </p>
+            <a href="#">Download Now <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <div>
+            <img src="https://i.ibb.co/LkP4L5T/card8.png" alt="" />
+            <h3>Explore Kubernetes</h3>
+            <p>
+              Learn how Kubernetes works and get started with cloud native app
+              development today.
+            </p>
+            <a href="#">Get Started <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </section>
+
+        <section class="carbon dark">
+          <div class="content">
+            <h2>Commiting To Carbon Negative</h2>
+            <p>Microsoft will be carbon negative by 2030 and by 2050 we will remove
+              all carbon the company has emitted since it was founded in 1975</p>
+            <a href="#" class="btn">
+              Learn More <i class="fas fa-chevron-right"></i>
+            </a>
+          </div>
+        </section>
+
+        <section class="follow">
+          <p>Follow Microsoft</p>
+          <a href="https://facebook.com">
+            <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook" />
+          </a>
+          <a href="https://twitter.com">
+            <img src="https://i.ibb.co/vJvbLwm/social-twitter.png" alt="Twitter" />
+          </a>
+          <a href="https://linkedin.com">
+            <img src="https://i.ibb.co/b30HMhR/social-linkedin.png" alt="Linkedin" />
+          </a>
+        </section>
+      </div>
+      <section class="links">
+        <div class="links-inner">
+          <ul>
+            <li><h3>What's New</h3></li>
+            <li><a href="#">Surface Pro X</a></li>
+            <li><a href="#">Surface Laptop 3</a></li>
+            <li><a href="#">Surface Pro 7</a></li>
+            <li><a href="#">Windows 10 apps</a></li>
+            <li><a href="#">Office apps</a></li>
+          </ul>
+          <ul>
+            <li><h3>Microsoft Store</h3></li>
+            <li><a href="#">Account Profile</a></li>
+            <li><a href="#">Download Center</a></li>
+            <li><a href="#">Microsoft Store support</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Older tracking</a></li>
+          </ul>
+          <ul>
+            <li><h3>Education</h3></li>
+            <li><a href="#">Microsfot in education</a></li>
+            <li><a href="#">Office for students</a></li>
+            <li><a href="#">Office 365 for schools</a></li>
+            <li><a href="#">Deals for studentss</a></li>
+            <li><a href="#">Microsfot Azure</a></li>
+          </ul>
+          <ul>
+            <li><h3>Enterprise</h3></li>
+            <li><a href="#">Azure</a></li>
+            <li><a href="#">AppSource</a></li>
+            <li><a href="#">Automotive</a></li>
+            <li><a href="#">Government</a></li>
+            <li><a href="#">Healthcare</a></li>
+          </ul>
+          <ul>
+            <li><h3>Developer</h3></li>
+            <li><a href="#">Visual Studio</a></li>
+            <li><a href="#">Windowszs Dev Center</a></li>
+            <li><a href="#">Developer Network</a></li>
+            <li><a href="#">TechNet</a></li>
+            <li><a href="#">Microsoft Developer</a></li>
+          </ul>
+          <ul>
+            <li><h3>Company</h3></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About Microsoft</a></li>
+            <li><a href="#">Company news</a></li>
+            <li><a href="#">Privacy at Microsoft</a></li>
+            <li><a href="#">Inverstors</a></li>
+          </ul>
         </div>
-      </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <footer class="footer">
+        <div class="footer-inner">
+          <div><i class="fas fa-globe fa-2x"></i> English (United States)</div>
+          <ul>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Contact Microsoft</a></li>
+            <li><a href="#">Privacy & cookies</a></li>
+            <li><a href="#">Terms of use</a></li>
+            <li><a href="#">Trademarks</a></li>
+            <li><a href="#">Safety & eco</a></li>
+            <li><a href="#">About our ads</a></li>
+            <li><a href="#">&copy; Microsoft 2020</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
   );
 }
