@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Home() {
 
@@ -27,7 +28,7 @@ export default function Home() {
 
       <div class="container">
         <nav class="main-nav">
-          <img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo" />
+          <Image src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo" />
 
           <ul class="main-menu">
             <li><a href="#">Office</a></li>
@@ -67,7 +68,7 @@ export default function Home() {
 
         <section class="home-cards">
           <div>
-            <img src="https://i.ibb.co/LZPVKq9/card1.png" alt="" />
+            <Image src="https://i.ibb.co/LZPVKq9/card1.png" alt="" />
             <h3>New Surface Pro 7</h3>
             <p>
               See how Katie Sowers, Asst. Coach for the 49ers, uses Surface Pro 7
@@ -76,7 +77,7 @@ export default function Home() {
             <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
           </div>
           <div>
-            <img src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" />
+            <Image src="https://i.ibb.co/KjGFHVJ/card2.png" alt="" />
             <h3>New Surface Laptop 3</h3>
             <p>
               Express yourself powerfully with a thin, light, and elegant design,
@@ -85,7 +86,7 @@ export default function Home() {
             <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
           </div>
           <div>
-            <img src="https://i.ibb.co/2cnshH6/card3.png" alt="" />
+            <Image src="https://i.ibb.co/2cnshH6/card3.png" alt="" />
             <h3>Save $150 + free controller</h3>
             <p>
               Buy an Xbox One X console and double your fun with a free select
@@ -94,7 +95,7 @@ export default function Home() {
             <a href="#">Learn More <i class="fas fa-chevron-right"></i></a>
           </div>
           <div>
-            <img src="https://i.ibb.co/G57P0Pb/card4.png" alt="" />
+            <Image src="https://i.ibb.co/G57P0Pb/card4.png" alt="" />
             <h3>The new Microsoft Edge</h3>
             <p>
               Expect more. World class performance, with more privacy, more
@@ -118,7 +119,7 @@ export default function Home() {
 
         <section class="home-cards">
           <div>
-            <img src="https://i.ibb.co/zVqhWn2/card5.png" alt="" />
+            <Image src="https://i.ibb.co/zVqhWn2/card5.png" alt="" />
             <h3>Microsoft Teams</h3>
             <p>
               Unleash the power of your team.
@@ -126,7 +127,7 @@ export default function Home() {
             <a href="#">Shop Now <i class="fas fa-chevron-right"></i></a>
           </div>
           <div>
-            <img src="https://i.ibb.co/mGZcxcn/card6.jpg" alt="" />
+            <Image src="https://i.ibb.co/mGZcxcn/card6.jpg" alt="" />
             <h3>Unlock the power of learning</h3>
             <p>
               Get students future-ready with Windows 10 devices. Starting at $219.
@@ -134,7 +135,7 @@ export default function Home() {
             <a href="#">Shop Now <i class="fas fa-chevron-right"></i></a>
           </div>
           <div>
-            <img src="https://i.ibb.co/NpPvVHj/card7.png" alt="" />
+            <Image src="https://i.ibb.co/NpPvVHj/card7.png" alt="" />
             <h3>Windows 10 Enterprise</h3>
             <p>
               Download the free 90-day evaluation for IT professionals.
@@ -142,7 +143,7 @@ export default function Home() {
             <a href="#">Download Now <i class="fas fa-chevron-right"></i></a>
           </div>
           <div>
-            <img src="https://i.ibb.co/LkP4L5T/card8.png" alt="" />
+            <Image src="https://i.ibb.co/LkP4L5T/card8.png" alt="" />
             <h3>Explore Kubernetes</h3>
             <p>
               Learn how Kubernetes works and get started with cloud native app
@@ -166,13 +167,13 @@ export default function Home() {
         <section class="follow">
           <p>Follow Microsoft</p>
           <a href="https://facebook.com">
-            <img src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook" />
+            <Image src="https://i.ibb.co/LrVMXNR/social-fb.png" alt="Facebook" />
           </a>
           <a href="https://twitter.com">
-            <img src="https://i.ibb.co/vJvbLwm/social-twitter.png" alt="Twitter" />
+            <Image src="https://i.ibb.co/vJvbLwm/social-twitter.png" alt="Twitter" />
           </a>
           <a href="https://linkedin.com">
-            <img src="https://i.ibb.co/b30HMhR/social-linkedin.png" alt="Linkedin" />
+            <Image src="https://i.ibb.co/b30HMhR/social-linkedin.png" alt="Linkedin" />
           </a>
         </section>
       </div>
